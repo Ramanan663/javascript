@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+}
+
+body {
+    background: gray;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+}
+
+.showNav {
+    transform: translateY(0);
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-top: 150px;
+}
+
+.navbar ul li a {
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.ham :hover {
+    cursor: pointer;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    border-bottom: 2px solid white;
+}
+
+#grey {
+    display: block;
+    background: grey;
+    height: 50px;
+    width: 350px;
+}
+
+#red {
+    display: block;
+    background: red;
+    height: 50px;
+    width: 350px;
+}
+
+#orange {
+    display: block;
+    background: orange;
+    height: 50px;
+    width: 350px;
+}
+
+#peurple {
+    display: block;
+    background: purple;
+    height: 50px;
+    width: 350px;
+}
+
+#green {
+    display: block;
+    background: green;
+    height: 50px;
+    width: 350px;
+}
+
+
+/*click mouse*/
+
+div.clickEffect {
+    position: fixed;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 50%;
+    animation: clickEffect 0.4s ease-out;
+    z-index: 99999;
+}
+
+@keyframes clickEffect {
+    0% {
+        opacity: 1;
+        width: 0.5em;
+        height: 0.5em;
+        margin: -0.25em;
+        border-width: 0.5em;
+    }
+    100% {
+        opacity: 0.2;
+        width: 15em;
+        height: 15em;
+        margin: -7.5em;
+        border-width: 0.03em;
+    }
+}
